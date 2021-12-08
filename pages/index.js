@@ -14,7 +14,9 @@ import Router  from 'next/router'
     setPageActions({mobileNumber : number })
 
     getBreachedData(number).then((res)=>{
-      // setData(res)
+      if(res){
+        setData(res)
+      }
       Router.push("/phone")
     }).catch((err)=>{console.log(err)})
     

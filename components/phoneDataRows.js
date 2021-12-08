@@ -16,7 +16,7 @@ const PhoneDatRows = (props)=>{
           :
           data.map((value,key)=>{
             return(
-              <div  key={key} className="pb-3">
+              <div  key={key} className="pb-3 pr-3 pl-3 pt-1">
                 <div className="card ">
                   <div className="card-body">
                     <div className="row">
@@ -28,7 +28,7 @@ const PhoneDatRows = (props)=>{
                         <span className="text Muted font-weight-bold"> Compromised Data  :</span> <span className="text-muted">{value.DataClasses.join()}</span>
                       </div>
                       <div className="col-md-12">
-                        <p className="text-muted">{value.Description}</p>
+                        <p className="text-muted" dangerouslySetInnerHTML={{__html: value.Description}}></p>
                       </div>
                     </div>
                   </div>
