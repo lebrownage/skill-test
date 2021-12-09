@@ -17,6 +17,9 @@ import Router  from 'next/router'
       if(res){
         setData(res)
       }
+      else{
+        setData([])
+      }
       Router.push("/phone")
     }).catch((err)=>{console.log(err)})
     
